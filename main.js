@@ -54,7 +54,9 @@ const handleTranslation = () => {
       return morseAlphabet[character];
     }
   });
-  console.log(getTranslation);
+  // join the array into one complete string
+  const getTranslatedString = getTranslation.join(" ");
+  console.log(getTranslatedString);
 };
 
 translateBtn.addEventListener("click", handleTranslation);
