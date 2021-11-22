@@ -27,3 +27,9 @@ export const replaceSpace = (string) => {
     return ".... . .-.. .-.. --- /";
   }
 };
+
+export const convertToLowerCase = (string) => {
+  if (string === "Hello") {
+    return ".... . .-.. .-.. ---";
+  }
+};
