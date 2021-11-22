@@ -7,7 +7,7 @@ ____________
 ### Technologies
 
 - HTML5
-- SCSS
+- Sass
 - JavaScript
 _____
 ### About
