@@ -1,5 +1,5 @@
 import { it, expect, describe } from "@jest/globals";
-import { translateLetter } from "./morse-translator.js";
+import { translateLetter, translateNumber } from "./morse-translator.js";
 
 // test individual letters
 // it should translate a to .-

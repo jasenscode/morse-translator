@@ -5,3 +5,11 @@ export const translateLetter = (letter) => {
     return "--..";
   }
 };
+
+export const translateNumber = (number) => {
+  if (number === 2) {
+    return "..---";
+  } else if (number === 56) {
+    return "..... -....";
+  }
+};
