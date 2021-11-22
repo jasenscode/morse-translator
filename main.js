@@ -3,6 +3,7 @@
 //Selectors
 const userInput = document.querySelector(".user-input");
 const translationOutput = document.querySelector(".translate-output");
+const translateBtn = document.querySelector(".btn");
 const morseAlphabet = {
   a: ".-",
   b: "-...",
