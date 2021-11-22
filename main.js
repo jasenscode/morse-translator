@@ -2,7 +2,8 @@
 
 //Selectors
 const userInput = document.querySelector(".user-input");
-const translationOutput = document.querySelector(".translate-output");
+const translationOutput = document.querySelector(".morse-output");
+const displayInput = document.querySelector(".display-input");
 const translateBtn = document.querySelector(".btn");
 const morseAlphabet = {
   a: ".-",
@@ -31,15 +32,15 @@ const morseAlphabet = {
   x: "-..-",
   y: "-.--",
   z: "--..",
-  1: "*----",
-  2: "**---",
-  3: "***--",
-  4: "****-",
-  5: "*****",
-  6: "-****",
-  7: "--***",
-  8: "---**",
-  9: "----*",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
   0: "-----",
 };
 
@@ -56,7 +57,10 @@ const handleTranslation = () => {
   });
   // join the array into one complete string
   const getTranslatedString = getTranslation.join(" ");
-  console.log(getTranslatedString);
+  // display translated string on HTML element
+  translationOutput.innerHTML = getTranslatedString;
+  displayInput.innerHTML = userInput.value;
+  userInput.value = "";
 };
 
 translateBtn.addEventListener("click", handleTranslation);

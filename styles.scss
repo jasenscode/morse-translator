@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +28,7 @@ body {
   background-color: #f7f7f7;
   padding: 4rem;
   border-radius: 15px;
+  max-width: 80%;
 }
 
 .user-input {
@@ -42,8 +44,12 @@ p {
   padding: 2rem;
 }
 
+.translate-output {
+  word-wrap: wrap;
+}
+
 .btn {
-  margin: auto;
+  margin: 0 auto 1rem auto;
   display: block;
   padding: 0.7rem 1.4rem;
   font-size: 1.1rem;
