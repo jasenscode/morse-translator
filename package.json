@@ -1,0 +1,25 @@
+{
+  "name": "morse-translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasenscode/morse-translator.git"
+  },
+  "author": "Jasen Chawda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasenscode/morse-translator/issues"
+  },
+  "homepage": "https://github.com/jasenscode/morse-translator#readme",
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.3.1"
+  }
+}
