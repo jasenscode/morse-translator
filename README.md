@@ -9,3 +9,5 @@ ____________
 - HTML5
 - SCSS
 - JavaScript
+_____
+### About
