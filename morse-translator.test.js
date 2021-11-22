@@ -1,9 +1,7 @@
 import { it, expect, describe } from "@jest/globals";
-import { translateLetter, translateNumber, translateWord } from "./morse-translator.js";
+import { translateLetter, translateNumber, translateWord, splitWord, translateToMorse } from "./morse-translator.js";
 
 // test individual letters
-// it should translate a to .-
-// it should translate z to --..
 
 describe("translate single letters to morse", () => {
   it("should translate a to .-", () => {
@@ -18,8 +16,6 @@ describe("translate single letters to morse", () => {
 });
 
 // test numbers
-// it should translate 2 to ..---
-// it should translate 56 to ..... -....
 
 describe("translate numbers to morse", () => {
   it("should translate 2 to ..---", () => {
@@ -34,8 +30,6 @@ describe("translate numbers to morse", () => {
 });
 
 // test complete words
-// it should translate sos to ... --- ...
-// it should translate hello to .... . .-.. .-.. ---
 
 describe("translate words to morse", () => {
   it("should translate hello to .... . .-.. .-.. ---", () => {
@@ -48,7 +42,3 @@ describe("translate words to morse", () => {
     expect(result).toBe("... --- ...");
   });
 });
-
-// test punctuation
-// it should translate comma to --..--
-// it should translate apostrophe to .----.

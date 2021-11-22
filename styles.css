@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffd6a7;
+  background: linear-gradient(132deg, #ffd6a7 0%, #dd87ff 40%, #ff9966 73%);
+  background-repeat: no-repeat;
+  font-family: "M PLUS 1 Code", sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.container {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 4rem;
+  border-radius: 15px;
+}
+
+.container > * {
+  padding: 2rem;
+}
+
+.user-input {
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
