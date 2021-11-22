@@ -44,8 +44,13 @@ const morseAlphabet = {
 };
 
 const handleTranslation = () => {
-  const splitCharacters = userInput.value.split("");
-  console.log(splitCharacters);
+  // split string into array of individual characters
+  const getSplitCharacters = userInput.value.split("");
+  // map over new array and compare to values in morseAlphabet object and create new array of morse translations
+  const getTranslation = getSplitCharacters.map((character) => {
+    return morseAlphabet[character];
+  });
+  console.log(getTranslation);
 };
 
 translateBtn.addEventListener("click", handleTranslation);
