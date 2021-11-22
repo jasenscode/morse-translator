@@ -32,3 +32,10 @@ const morseAlphabet = {
   y: "-.--",
   z: "--..",
 };
+
+const handleTranslation = () => {
+  const splitCharacters = userInput.value.split("");
+  console.log(splitCharacters);
+};
+
+translateBtn.addEventListener("click", handleTranslation);
