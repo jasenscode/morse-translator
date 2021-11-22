@@ -37,6 +37,18 @@ describe("translate numbers to morse", () => {
 // it should translate sos to ... --- ...
 // it should translate hello to .... . .-.. .-.. ---
 
+describe("translate words to morse", () => {
+  it("should translate hello to .... . .-.. .-.. ---", () => {
+    const result = translateNumber("hello");
+    expect(result).toBe(".... . .-.. .-.. ---");
+  });
+
+  it("should translate sos to ... --- ...", () => {
+    const result = translateNumber("sos");
+    expect(result).toBe("... --- ...");
+  });
+});
+
 // test punctuation
 // it should translate comma to --..--
 // it should translate apostrophe to .----.
