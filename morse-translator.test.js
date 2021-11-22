@@ -1,5 +1,5 @@
 import { it, expect, describe } from "@jest/globals";
-import { translateLetter, translateNumber } from "./morse-translator.js";
+import { translateLetter, translateNumber, translateWord } from "./morse-translator.js";
 
 // test individual letters
 // it should translate a to .-
@@ -39,12 +39,12 @@ describe("translate numbers to morse", () => {
 
 describe("translate words to morse", () => {
   it("should translate hello to .... . .-.. .-.. ---", () => {
-    const result = translateNumber("hello");
+    const result = translateWord("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
   });
 
   it("should translate sos to ... --- ...", () => {
-    const result = translateNumber("sos");
+    const result = translateWord("sos");
     expect(result).toBe("... --- ...");
   });
 });

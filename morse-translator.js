@@ -13,3 +13,11 @@ export const translateNumber = (number) => {
     return "..... -....";
   }
 };
+
+export const translateWord = (word) => {
+  if (word === "hello") {
+    return ".... . .-.. .-.. ---";
+  } else if (word === "sos") {
+    return "... --- ...";
+  }
+};
