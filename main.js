@@ -51,7 +51,7 @@ const handleTranslation = () => {
   const getTranslation = getSplitCharacters.map((character) => {
     if (character === " ") {
       return "/";
-    } else if (character === character.toUpperCase()) {
+    } else if (character.toUpperCase()) {
       return morseAlphabet[character.toLowerCase()];
     } else {
       return morseAlphabet[character];

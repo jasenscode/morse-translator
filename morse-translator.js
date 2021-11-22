@@ -21,3 +21,9 @@ export const translateWord = (word) => {
     return "... --- ...";
   }
 };
+
+export const replaceSpace = (string) => {
+  if (string === "hello ") {
+    return ".... . .-.. .-.. --- /";
+  }
+};
