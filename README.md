@@ -24,5 +24,5 @@ After this, I wrote down each step in the required logic for the actual function
 
 It involved firstly splitting each word into an array of single character strings using the array.split() method. I then used the array.map() method to iterate and compare each character to the relevant key in an object containing the relevant morse translation. Finally I used to array.join() method to join characters into words before dispalying this to the user.
 
-Admittedly at the start I struggled with how to do this but by the end of the project, I understood more the requirements of a TDD approach and also how useful it would be on any project, especially larger ones.
+Admittedly at the start I struggled with how to work with a TDD approach but by the end of the project, I understood more the requirements of a TDD approach and also how useful it would be on any project, especially larger ones.
 
