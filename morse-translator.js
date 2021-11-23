@@ -1,45 +1,10 @@
-const morseCharacters = {
-  a: ".-",
-  b: "-...",
-  c: "-.-.",
-  d: "-..",
-  e: ".",
-  f: "..-.",
-  g: "--.",
-  h: "....",
-  i: "..",
-  j: ".---",
-  k: "-.-",
-  l: ".-..",
-  m: "--",
-  n: "-.",
-  o: "---",
-  p: ".--.",
-  q: "--.-",
-  r: ".-.",
-  s: "...",
-  t: "-",
-  u: "..-",
-  v: "...-",
-  w: ".--",
-  x: "-..-",
-  y: "-.--",
-  z: "--..",
-  1: ".----",
-  2: "..---",
-  3: "...--",
-  4: "....-",
-  5: ".....",
-  6: "-....",
-  7: "--...",
-  8: "---..",
-  9: "----.",
-  0: "-----",
-};
+import { morseCharacters } from "./data/data.js";
 
 export const handleTranslation = (word) => {
-  // this had to be added in to make test pass although in real environment HTML input value would be converted to string
+  // split string into array of individual characters
   const getSplitCharacters = word.toString().split("");
+
+  // map over new array and compare to values in morseAlphabet object and create new array of morse translations
   const getTranslation = getSplitCharacters.map((character) => {
     if (character === " ") {
       return "/";
@@ -49,6 +14,8 @@ export const handleTranslation = (word) => {
       return morseCharacters[character];
     }
   });
+
+  // join array elements into one string
   const getTranslatedString = getTranslation.join(" ");
   return getTranslatedString;
 };
