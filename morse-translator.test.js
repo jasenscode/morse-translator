@@ -1,16 +1,16 @@
 import { it, expect, describe } from "@jest/globals";
-import { translateLetter, translateNumber, translateWord, replaceSpace, convertToLowerCase } from "./morse-translator.js";
+import { handleTranslation } from "./morse-translator.js";
 
 // test individual letters
 
 describe("translate single letters to morse", () => {
   it("should translate a to .-", () => {
-    const result = translateLetter("a");
+    const result = handleTranslation("a");
     expect(result).toBe(".-");
   });
 
   it("should translate z to --..", () => {
-    const result = translateLetter("z");
+    const result = handleTranslation("z");
     expect(result).toBe("--..");
   });
 });
@@ -19,12 +19,12 @@ describe("translate single letters to morse", () => {
 
 describe("translate numbers to morse", () => {
   it("should translate 2 to ..---", () => {
-    const result = translateNumber(2);
+    const result = handleTranslation(2);
     expect(result).toBe("..---");
   });
 
   it("should translate 56 to ..... -....", () => {
-    const result = translateNumber(56);
+    const result = handleTranslation(56);
     expect(result).toBe("..... -....");
   });
 });
@@ -33,24 +33,37 @@ describe("translate numbers to morse", () => {
 
 describe("translate words to morse", () => {
   it("should translate hello to .... . .-.. .-.. ---", () => {
-    const result = translateWord("hello");
+    const result = handleTranslation("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
   });
 
   it("should translate sos to ... --- ...", () => {
-    const result = translateWord("sos");
+    const result = handleTranslation("sos");
     expect(result).toBe("... --- ...");
   });
 });
 
 // test for spaces
 it("should replace spaces with /", () => {
-  const result = replaceSpace("hello ");
+  const result = handleTranslation("hello ");
   expect(result).toBe(".... . .-.. .-.. --- /");
 });
 
-// check for uppercase letters
+// test for uppercase letters
 it("should convert uppercase letters to lowercase", () => {
-  const result = convertToLowerCase("Hello");
+  const result = handleTranslation("Hello");
   expect(result).toBe(".... . .-.. .-.. ---");
+});
+
+// test  for unsupported characters
+describe("should ignore characters not in the characters object", () => {
+  it("should convert ! to empty string", () => {
+    const result = handleTranslation("!");
+    expect(result).toBe("");
+  });
+
+  it("should convert @ to empty string", () => {
+    const result = handleTranslation("@");
+    expect(result).toBe("");
+  });
 });

@@ -5,7 +5,7 @@ const userInput = document.querySelector(".user-input");
 const translationOutput = document.querySelector(".morse-output");
 const displayInput = document.querySelector(".display-input");
 const translateBtn = document.querySelector(".btn");
-const morseAlphabet = {
+const morseCharacters = {
   a: ".-",
   b: "-...",
   c: "-.-.",
@@ -47,18 +47,21 @@ const morseAlphabet = {
 const handleTranslation = () => {
   // split string into array of individual characters
   const getSplitCharacters = userInput.value.split("");
+
   // map over new array and compare to values in morseAlphabet object and create new array of morse translations
   const getTranslation = getSplitCharacters.map((character) => {
     if (character === " ") {
       return "/";
     } else if (character.toUpperCase()) {
-      return morseAlphabet[character.toLowerCase()];
+      return morseCharacters[character.toLowerCase()];
     } else {
-      return morseAlphabet[character];
+      return morseCharacters[character];
     }
   });
+
   // join the array into one complete string
   const getTranslatedString = getTranslation.join(" ");
+
   // display translated string on HTML element
   translationOutput.innerHTML = getTranslatedString;
   displayInput.innerHTML = userInput.value;
