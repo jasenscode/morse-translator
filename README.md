@@ -1,5 +1,7 @@
 # Morse code translator
 
+This is an English to Morse Code translator.
+
 The timeframe allowed to complete this project was one day.
 
 [Check out the live demo here!](https://jasenscode.github.io/morse-translator/)
